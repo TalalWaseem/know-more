@@ -39,9 +39,11 @@ hr {
   margin: 30px auto;
   border-bottom: $border-color 1px solid;
 }
+
 .fa-stack-1x {
   color: #fff;
 }
+
 // Wrapper Start
 #km-wrapper {
   width: $wrapper-width;
@@ -165,12 +167,19 @@ hr {
     }
     .km-block-desc {
       padding: 15px;
-      h4{
-        font-family: monospace ;
+      h4 {
+        font-family: monospace;
       }
       p {
         text-align: left;
         line-height: 20px;
+      }
+      span {
+        display: inline-table;
+        img {
+          width: 60px;
+          vertical-align: top;
+        }
       }
       form#km-contact-form {
         width: 500px;
@@ -203,6 +212,7 @@ hr {
     }
   }
 }
+
 // Content End
 
 //Footer Starts
@@ -217,6 +227,7 @@ hr {
     }
   }
 }
+
 // Footer Ends
 
 // Blinking Cursor

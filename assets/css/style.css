@@ -527,6 +527,11 @@ hr {
       #km-content article.km-block .km-block-desc p {
         text-align: left;
         line-height: 20px; }
+      #km-content article.km-block .km-block-desc span {
+        display: inline-table; }
+        #km-content article.km-block .km-block-desc span img {
+          width: 60px;
+          vertical-align: top; }
       #km-content article.km-block .km-block-desc form#km-contact-form {
         width: 500px;
         margin: 0 auto;
