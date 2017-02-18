@@ -1,4 +1,8 @@
 #[Know Me (Theme)](https://github.com/isheraz/know-more.git)
+[![ghit.me](https://ghit.me/badge.svg?style=flat-square&repo=isheraz/know-more)](https://ghit.me/repo/isheraz/know-more)
+[![GitHub issues](https://img.shields.io/github/issues/isheraz/know-more.svg?style=flat-square)](https://github.com/isheraz/know-more/issues)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/isheraz/know-more/master/LICENSE.txt)
+
 
 A simple html/scss/jQuery based theme
 ### CREATOR
