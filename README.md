@@ -1,8 +1,11 @@
 #[Know Me (Theme)](https://github.com/isheraz/know-more.git)
 
 A simple html/scss/jQuery based theme
-#### Reach me
-`sherazahmed93@gmail.com`
+### CREATOR
+Know Me (theme) was created by and is maintained by Sheraz Ahmed.
+ - [Email](mailto:sherazahmed93@gmail.com?subject=Email from github-KnowMe)
+ - [Facebook](https://www.facebook.com/ranasherazahmed)
+ - [StackOverflow](http://stackoverflow.com/cv/isheraz)
 ### How to use
  - Fork the theme, Learn a Little, Study a Little more, Read the Comments and Make Changes as needed. 
  - Any Suggestion/Improvements are Welcome.
@@ -12,7 +15,7 @@ A simple html/scss/jQuery based theme
 View my theme in action [here](#)
 
 ### Screenshot
-![screenshot](#)
+![screenshot](https://raw.githubusercontent.com/isheraz/know-me/master/screenshot.png)
 
 
 ALL RIGHTS RESERVED &copy;2017 Sheraz Ahmed  /  Website by [Sheraz Ahmed](#)
