@@ -8,8 +8,7 @@ $anchor: #8f2321;
 $anchor-hover: #663134;
 $border-color: #FFA500;
 $extra-color-0: #815647;
-$extra-color-1: #DDA0DD;
-$wrapper-width: 700px;
+$wrapper-width: 1000px;
 $content-width: 100%;
 $margin-between: 2%;
 $sidebar-width: 100%;
@@ -23,6 +22,26 @@ body {
   color: $font-color;
 }
 
+a {
+  text-decoration: underline;
+  background: transparent;
+  color: $font-highlight;
+  font-family: monospace;
+  &:hover, &:active {
+    background: $background;
+    color: $font-color;
+    border-color: $font-color;
+  }
+}
+
+hr {
+  width: $wrapper-width - 100;
+  margin: 30px auto;
+  border-bottom: $border-color 1px solid;
+}
+.fa-stack-1x {
+  color: #fff;
+}
 // Wrapper Start
 #km-wrapper {
   width: $wrapper-width;
@@ -31,6 +50,9 @@ body {
   position: relative;
   background-color: $background;
   border: 1px solid $border-color;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   z-index: 1;
   &::before {
     content: '';
@@ -69,11 +91,10 @@ body {
           margin: 0 0 10px;
           padding: 3px;
           text-align: center;
-          display: block;
           text-decoration: none;
           color: $font-color;
-          &:hover , &:active {
-            transform: translate3d(0px,-5px,0px);
+          &:hover, &:active {
+            transform: translate3d(0px, -5px, 0px);
             color: $anchor;
             box-shadow: 0px 0px 5px $anchor-hover;
           }
@@ -101,10 +122,10 @@ body {
     font-size: 3em;
     span {
       color: $font-highlight;
+      font-family: monospace;
     }
   }
   h2 {
-    color: $font-color;
     font-weight: 400;
     font-size: 1.2em;
     span {
@@ -124,18 +145,130 @@ body {
   padding: 15px;
   article.km-block {
     display: inline-block;
-    height: 300px;
-    width: 49%;
-    margin: 0.5%;
+    min-height: 400px;
+    border-radius: 5px;
+    width: (($wrapper-width/2) - 60);
+    margin: 15px;
     background-color: #fff;
     float: left;
     &:last-child {
-      width: 99%;
+      width: ($wrapper-width - 90);
       float: none;
       clear: both;
     }
+    .km-block-icon {
+      padding: 15px;
+      h3 {
+        margin-left: 30px;
+        display: inline-block;
+      }
+    }
+    .km-block-desc {
+      padding: 15px;
+      h4{
+        font-family: monospace ;
+      }
+      p {
+        text-align: left;
+        line-height: 20px;
+      }
+      form#km-contact-form {
+        width: 500px;
+        margin: 0 auto;
+        display: block;
+        input, textarea {
+          display: block;
+          width: 100%;
+          margin: 15px auto;
+          padding: 10px;
+          border: 2px solid $background;
+          border-radius: 3px;
+          //vertical-align: top;
+          //outline: 0;
+        }
+        textarea {
+          resize: none;
+        }
+        input[type="submit"] {
+          width: 100px;
+          background: transparent;
+          color: $font-highlight;
+          font-family: monospace;
+          &:hover {
+            background: $background;
+            color: $font-color;
+          }
+        }
+      }
+    }
+  }
+}
+// Content End
+
+//Footer Starts
+#km-footer {
+  width: $wrapper-width;
+  text-align: center;
+  padding: 0 0 30px;
+  .km-social-icons {
+    a {
+      font-family: none;
+      text-decoration: none;
+    }
+  }
+}
+// Footer Ends
+
+// Blinking Cursor
+.blinking-cursor {
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
   }
 }
 
-// Content End
+@-moz-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
 
+@-webkit-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-ms-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-o-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}

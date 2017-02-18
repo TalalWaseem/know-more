@@ -408,13 +408,34 @@ body {
   background: #e9e8e9;
   color: #373c3f; }
 
+a {
+  text-decoration: underline;
+  background: transparent;
+  color: #a51919;
+  font-family: monospace; }
+  a:hover, a:active {
+    background: #e9e8e9;
+    color: #373c3f;
+    border-color: #373c3f; }
+
+hr {
+  width: 900px;
+  margin: 30px auto;
+  border-bottom: #050002 1px solid; }
+
+.fa-stack-1x {
+  color: #fff; }
+
 #km-wrapper {
-  width: 700px;
+  width: 1000px;
   margin: 0 auto;
   display: block;
   position: relative;
   background-color: #e9e8e9;
   border: 1px solid #050002;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   z-index: 1; }
   #km-wrapper::before {
     content: '';
@@ -424,7 +445,7 @@ body {
     left: -1px;
     border: 1px solid #e9e8e9;
     height: 100%;
-    width: 700px;
+    width: 1000px;
     border-radius: 20px; }
 
 #km-sidebar {
@@ -448,7 +469,6 @@ body {
           margin: 0 0 10px;
           padding: 3px;
           text-align: center;
-          display: block;
           text-decoration: none;
           color: #373c3f; }
           #km-sidebar nav ul li.km-menu-item a:hover, #km-sidebar nav ul li.km-menu-item a:active {
@@ -469,9 +489,9 @@ body {
   #km-header h1 {
     font-size: 3em; }
     #km-header h1 span {
-      color: #a51919; }
+      color: #a51919;
+      font-family: monospace; }
   #km-header h2 {
-    color: #373c3f;
     font-weight: 400;
     font-size: 1.2em; }
     #km-header h2 span {
@@ -485,14 +505,89 @@ body {
   padding: 15px; }
   #km-content article.km-block {
     display: inline-block;
-    height: 300px;
-    width: 49%;
-    margin: 0.5%;
+    min-height: 400px;
+    border-radius: 5px;
+    width: 440px;
+    margin: 15px;
     background-color: #fff;
     float: left; }
     #km-content article.km-block:last-child {
-      width: 99%;
+      width: 910px;
       float: none;
       clear: both; }
+    #km-content article.km-block .km-block-icon {
+      padding: 15px; }
+      #km-content article.km-block .km-block-icon h3 {
+        margin-left: 30px;
+        display: inline-block; }
+    #km-content article.km-block .km-block-desc {
+      padding: 15px; }
+      #km-content article.km-block .km-block-desc h4 {
+        font-family: monospace; }
+      #km-content article.km-block .km-block-desc p {
+        text-align: left;
+        line-height: 20px; }
+      #km-content article.km-block .km-block-desc form#km-contact-form {
+        width: 500px;
+        margin: 0 auto;
+        display: block; }
+        #km-content article.km-block .km-block-desc form#km-contact-form input, #km-content article.km-block .km-block-desc form#km-contact-form textarea {
+          display: block;
+          width: 100%;
+          margin: 15px auto;
+          padding: 10px;
+          border: 2px solid #e9e8e9;
+          border-radius: 3px; }
+        #km-content article.km-block .km-block-desc form#km-contact-form textarea {
+          resize: none; }
+        #km-content article.km-block .km-block-desc form#km-contact-form input[type="submit"] {
+          width: 100px;
+          background: transparent;
+          color: #a51919;
+          font-family: monospace; }
+          #km-content article.km-block .km-block-desc form#km-contact-form input[type="submit"]:hover {
+            background: #e9e8e9;
+            color: #373c3f; }
+
+#km-footer {
+  width: 1000px;
+  text-align: center;
+  padding: 0 0 30px; }
+  #km-footer .km-social-icons a {
+    font-family: none;
+    text-decoration: none; }
+
+.blinking-cursor {
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite; }
+
+@keyframes blink {
+  from, to {
+    color: transparent; }
+  50% {
+    color: black; } }
+@-moz-keyframes blink {
+  from, to {
+    color: transparent; }
+  50% {
+    color: black; } }
+@-webkit-keyframes blink {
+  from, to {
+    color: transparent; }
+  50% {
+    color: black; } }
+@-ms-keyframes blink {
+  from, to {
+    color: transparent; }
+  50% {
+    color: black; } }
+@-o-keyframes blink {
+  from, to {
+    color: transparent; }
+  50% {
+    color: black; } }
 
 /*# sourceMappingURL=style.css.map */
