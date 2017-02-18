@@ -15,7 +15,7 @@ Know Me (theme) was created by and is maintained by Sheraz Ahmed.
 View my theme in action [here](#)
 
 ### Screenshot
-![screenshot](https://raw.githubusercontent.com/isheraz/know-me/master/screenshot.png)
+![screenshot](https://rawgit.com/isheraz/know-more/master/screenshot.png)
 
 
 ALL RIGHTS RESERVED &copy;2017 Sheraz Ahmed  /  Website by [Sheraz Ahmed](#)
