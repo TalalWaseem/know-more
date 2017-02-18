@@ -6,13 +6,13 @@ $font-highlight: #a51919;
 $font-impression: #7f2a28;
 $anchor: #8f2321;
 $anchor-hover: #663134;
-$border-color : #FFA500;
+$border-color: #FFA500;
 $extra-color-0: #815647;
 $extra-color-1: #DDA0DD;
-$wrapper-width: 1100px;
-$content-width: 65%;
+$wrapper-width: 700px;
+$content-width: 100%;
 $margin-between: 2%;
-$sidebar-width: 28%;
+$sidebar-width: 100%;
 
 $border-color: #050002;
 
@@ -22,33 +22,8 @@ body {
   background: $background;
   color: $font-color;
 }
-// Side Bar Floating
-#km-sidebar {
-  width: $sidebar-width;
-  float: left;
-  display: inline-block;
-  border-radius: 20px;
-  nav ul {
-    margin-top: 15px;
-    list-style: none;
-    li.km-menu-item {
-      a {
-        border: 1px solid $border-color;
-        line-height: 30px;
-        margin: 0 0 10px;
-        padding: 3px;
-        text-align: center;
-        display: block;
-        text-decoration: none;
-        color: $font-color;
-        &:hover {
-          color: $anchor;
-          box-shadow: 0px 0px 5px $anchor-hover;
-        }
-      }
-    }
-  }
-}
+
+// Wrapper Start
 #km-wrapper {
   width: $wrapper-width;
   margin: 0 auto;
@@ -68,49 +43,99 @@ body {
     width: $wrapper-width;
     border-radius: 20px;
   }
-  #km-header {
-    text-align: center;
-    display: inline-block;
-    width: $content-width;
-    margin-left: $margin-between;
-    img {
-      display: block;
-      width: 60%;
-      margin: 0 auto;
-    }
-    h1 {
-      font-size: 3em;
-      span {
-        color: $font-highlight;
-      }
-    }
-    h2 {
-      color: $font-color;
-      font-weight: 400;
-      font-size: 1.2em;
-      span {
-        color: $font-impression;
-      }
-    }
-  }
-  #km-content {
-    border-radius: 20px;
-    display: inline-block;
-    width: $content-width;
-    margin-left: $margin-between;
-    float: right;
-    article.km-block {
-      display: inline-block;
-      height: 300px;
-      width: 49%;
-      margin: 0.5%;
-      background-color: #fff;
-      float: left;
-      &:last-child {
-        width: 99%;
-        float: none;
-        clear: both;
+}
+
+// Wrapper End
+
+// Side bar Start
+#km-sidebar {
+  width: $sidebar-width;
+  text-align: center;
+  display: none;
+  border-radius: 20px;
+  nav {
+    padding: 15px;
+    margin: 15px;
+    ul {
+      padding: 0px;
+      margin: 0px;
+      list-style: none;
+      li.km-menu-item {
+        display: inline-block;
+        a {
+          display: block;
+          border: 1px solid $border-color;
+          line-height: 30px;
+          margin: 0 0 10px;
+          padding: 3px;
+          text-align: center;
+          display: block;
+          text-decoration: none;
+          color: $font-color;
+          &:hover , &:active {
+            transform: translate3d(0px,-5px,0px);
+            color: $anchor;
+            box-shadow: 0px 0px 5px $anchor-hover;
+          }
+        }
       }
     }
   }
 }
+
+// Side bar End
+
+// Header Start
+#km-header {
+  text-align: center;
+  display: block;
+  margin: 15px;
+  padding: 15px;
+  img {
+    display: block;
+    width: 30%;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 3em;
+    span {
+      color: $font-highlight;
+    }
+  }
+  h2 {
+    color: $font-color;
+    font-weight: 400;
+    font-size: 1.2em;
+    span {
+      color: $font-impression;
+    }
+  }
+}
+
+// Header End
+
+// Content Start
+#km-content {
+  border-radius: 20px;
+  display: block;
+  text-align: center;
+  margin: 15px;
+  padding: 15px;
+  article.km-block {
+    display: inline-block;
+    height: 300px;
+    width: 49%;
+    margin: 0.5%;
+    background-color: #fff;
+    float: left;
+    &:last-child {
+      width: 99%;
+      float: none;
+      clear: both;
+    }
+  }
+}
+
+// Content End
+
