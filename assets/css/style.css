@@ -423,6 +423,36 @@ hr {
   margin: 30px auto;
   border-bottom: #050002 1px solid; }
 
+blockquote {
+  display: block;
+  padding: 15px 20px 15px 45px;
+  margin: 0 0 20px;
+  font-family: Georgia, serif;
+  color: #666;
+  text-align: justify;
+  border-left: 10px solid #7f2a28;
+  border-right: 2px solid #7f2a28;
+  -moz-box-shadow: 2px 2px 15px #ccc;
+  -webkit-box-shadow: 2px 2px 15px #ccc;
+  box-shadow: 2px 2px 15px #ccc; }
+
+blockquote::after {
+  /*Reset to make sure*/
+  content: ""; }
+
+blockquote a {
+  text-decoration: none;
+  background: #eee;
+  cursor: pointer;
+  padding: 0 3px;
+  color: #c76c0c; }
+
+blockquote a:hover {
+  color: #666; }
+
+blockquote em {
+  font-style: italic; }
+
 .fa-stack-1x {
   color: #fff; }
 
