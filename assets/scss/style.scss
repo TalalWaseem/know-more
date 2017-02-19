@@ -39,6 +39,21 @@ hr {
   margin: 30px auto;
   border-bottom: $border-color 1px solid;
 }
+ul {list-style: none;
+}
+ul li{
+  margin: 0 10px 0 0;
+  text-align: left;
+  line-height: 20px;
+  position: relative;
+}
+ul li::before{
+  content: "\1F786";
+  font-size: 12px;
+  top: 1px;
+  left: -20px;
+  position: absolute;
+}
 
 blockquote {
   display: block;
