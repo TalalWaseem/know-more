@@ -18,10 +18,10 @@ Know Me (theme) was created by and is maintained by Sheraz Ahmed.
  - Replace `you@email.com` in `index.html` with your email address. refer to [formspree](http://formspree.io/) for more information.
  
 ### Live Demo
-View my theme in action [here](#)
+View my theme in action [here](https://isheraz.github.io/know-more/)
 
 ### Screenshot
 ![screenshot](https://rawgit.com/isheraz/know-more/master/screenshot.png)
 
 
-ALL RIGHTS RESERVED &copy;2017 Sheraz Ahmed  /  Website by [Sheraz Ahmed](#)
+ALL RIGHTS RESERVED &copy;2017 Sheraz Ahmed  /  Website by [Sheraz Ahmed](https://github.com/isheraz)
