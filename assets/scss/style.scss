@@ -1,0 +1,333 @@
+@import 'reset';
+
+$background: #e9e8e9;
+$font-color: rgb(55, 60, 63);
+$font-highlight: #a51919;
+$font-impression: #7f2a28;
+$anchor: #8f2321;
+$anchor-hover: #663134;
+$border-color: #FFA500;
+$extra-color-0: #815647;
+$wrapper-width: 1000px;
+$content-width: 100%;
+$margin-between: 2%;
+$sidebar-width: 100%;
+
+$border-color: #050002;
+
+body {
+  font-family: 'Raleway', sans-serif;
+  padding: 30px;
+  background: $background;
+  color: $font-color;
+}
+
+a {
+  text-decoration: underline;
+  background: transparent;
+  color: $font-highlight;
+  font-family: monospace;
+  &:hover, &:active {
+    background: $background;
+    color: $font-color;
+    border-color: $font-color;
+  }
+}
+
+hr {
+  width: $wrapper-width - 100;
+  margin: 30px auto;
+  border-bottom: $border-color 1px solid;
+}
+ul {list-style: none;
+}
+ul li{
+  margin: 0 10px 0 0;
+  text-align: left;
+  line-height: 20px;
+  position: relative;
+}
+ul li::before{
+  content: "\1F786";
+  font-size: 12px;
+  top: 1px;
+  left: -20px;
+  position: absolute;
+}
+
+blockquote {
+  display: block;
+  padding: 15px 20px 15px 45px;
+  margin: 0 0 20px;
+  font-family: Georgia, serif;
+  color: #666;
+  text-align: justify;
+  border-left: 10px solid $font-impression;
+  border-right: 2px solid $font-impression;
+  -moz-box-shadow: 2px 2px 15px #ccc;
+  -webkit-box-shadow: 2px 2px 15px #ccc;
+  box-shadow: 2px 2px 15px #ccc;
+}
+blockquote::after{
+  /*Reset to make sure*/
+  content: "";
+}
+
+blockquote a{
+  text-decoration: none;
+  background: #eee;
+  cursor: pointer;
+  padding: 0 3px;
+  color: #c76c0c;
+}
+
+blockquote a:hover{
+  color: #666;
+}
+
+blockquote em{
+  font-style: italic;
+}
+.fa-stack-1x {
+  color: #fff;
+}
+
+// Wrapper Start
+#km-wrapper {
+  width: $wrapper-width;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  background-color: $background;
+  border: 1px solid $border-color;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  z-index: 1;
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -1px;
+    left: -1px;
+    border: 1px solid $background;
+    height: 100%;
+    width: $wrapper-width;
+    border-radius: 20px;
+  }
+}
+
+// Wrapper End
+
+// Side bar Start
+#km-sidebar {
+  width: $sidebar-width;
+  text-align: center;
+  display: none;
+  border-radius: 20px;
+  nav {
+    padding: 15px;
+    margin: 15px;
+    ul {
+      padding: 0px;
+      margin: 0px;
+      list-style: none;
+      li.km-menu-item {
+        display: inline-block;
+        a {
+          display: block;
+          border: 1px solid $border-color;
+          line-height: 30px;
+          margin: 0 0 10px;
+          padding: 3px;
+          text-align: center;
+          text-decoration: none;
+          color: $font-color;
+          &:hover, &:active {
+            transform: translate3d(0px, -5px, 0px);
+            color: $anchor;
+            box-shadow: 0px 0px 5px $anchor-hover;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Side bar End
+
+// Header Start
+#km-header {
+  text-align: center;
+  display: block;
+  margin: 15px;
+  padding: 15px;
+  img {
+    display: block;
+    width: 30%;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 3em;
+    span {
+      color: $font-highlight;
+      font-family: monospace;
+    }
+  }
+  h2 {
+    font-weight: 400;
+    font-size: 1.2em;
+    span {
+      color: $font-impression;
+    }
+  }
+}
+
+// Header End
+
+// Content Start
+#km-content {
+  border-radius: 20px;
+  display: block;
+  text-align: center;
+  margin: 15px;
+  padding: 15px;
+  article.km-block {
+    display: inline-block;
+    min-height: 400px;
+    border-radius: 5px;
+    width: (($wrapper-width/2) - 60);
+    margin: 15px;
+    background-color: #fff;
+    float: left;
+    &:last-child {
+      width: ($wrapper-width - 90);
+      float: none;
+      clear: both;
+    }
+    .km-block-icon {
+      padding: 15px;
+      h3 {
+        margin-left: 30px;
+        display: inline-block;
+      }
+    }
+    .km-block-desc {
+      padding: 15px;
+      h4 {
+        font-family: monospace;
+      }
+      p {
+        text-align: left;
+        line-height: 20px;
+      }
+      span {
+        display: inline-table;
+        img {
+          width: 60px;
+          vertical-align: top;
+        }
+      }
+      form#km-contact-form {
+        width: 500px;
+        margin: 0 auto;
+        display: block;
+        input, textarea {
+          display: block;
+          width: 100%;
+          margin: 15px auto;
+          padding: 10px;
+          border: 2px solid $background;
+          border-radius: 3px;
+          //vertical-align: top;
+          //outline: 0;
+        }
+        textarea {
+          resize: none;
+        }
+        input[type="submit"] {
+          width: 100px;
+          background: transparent;
+          color: $font-highlight;
+          font-family: monospace;
+          &:hover {
+            background: $background;
+            color: $font-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Content End
+
+//Footer Starts
+#km-footer {
+  width: $wrapper-width;
+  text-align: center;
+  padding: 0 0 30px;
+  .km-social-icons {
+    a {
+      font-family: none;
+      text-decoration: none;
+    }
+  }
+}
+
+// Footer Ends
+
+// Blinking Cursor
+.blinking-cursor {
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-webkit-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-ms-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-o-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
