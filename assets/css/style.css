@@ -402,11 +402,33 @@ template {
 [hidden] {
   display: none; }
 
+textarea, input {
+  box-sizing: border-box; }
+
+/* Responsive variables */
 body {
   font-family: 'Raleway', sans-serif;
   padding: 30px;
   background: #e9e8e9;
   color: #373c3f; }
+  @media screen and (min-width: 320px) and (max-width: 1024px) {
+    body {
+      padding: 0px; } }
+
+h1 {
+  font-size: 3em; }
+  h1 span {
+    color: #a51919;
+    font-family: monospace; }
+
+h2 {
+  font-weight: 400;
+  font-size: 1.2em; }
+  h2 span {
+    color: #7f2a28; }
+
+h4 {
+  font-family: monospace; }
 
 a {
   text-decoration: underline;
@@ -451,6 +473,10 @@ blockquote {
   -moz-box-shadow: 2px 2px 15px #ccc;
   -webkit-box-shadow: 2px 2px 15px #ccc;
   box-shadow: 2px 2px 15px #ccc; }
+  @media screen and (min-width: 320px) and (max-width: 1024px) {
+    blockquote {
+      font-size: 2.7em;
+      text-align: center; } }
 
 blockquote::after {
   /*Reset to make sure*/
@@ -472,6 +498,28 @@ blockquote em {
 .fa-stack-1x {
   color: #fff; }
 
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+  h1 {
+    font-size: 4em;
+    margin-bottom: 1.3em; }
+
+  h2 {
+    font-size: 3.5em;
+    line-height: 1.1em; }
+    h2 span {
+      display: block;
+      text-indent: -9000px;
+      height: 10px; }
+
+  h4 {
+    font-size: 3em; }
+
+  p {
+    font-size: 2.7em; }
+
+  ul a {
+    font-size: 2.7em;
+    line-height: 1.5em; } }
 #km-wrapper {
   width: 1000px;
   margin: 0 auto;
@@ -493,6 +541,12 @@ blockquote em {
     height: 100%;
     width: 1000px;
     border-radius: 20px; }
+  @media screen and (min-width: 320px) and (max-width: 1024px) {
+    #km-wrapper {
+      border: none;
+      width: 100%; }
+      #km-wrapper::before {
+        display: none; } }
 
 #km-sidebar {
   width: 100%;
@@ -532,16 +586,9 @@ blockquote em {
     width: 30%;
     border-radius: 50%;
     margin: 0 auto; }
-  #km-header h1 {
-    font-size: 3em; }
-    #km-header h1 span {
-      color: #a51919;
-      font-family: monospace; }
-  #km-header h2 {
-    font-weight: 400;
-    font-size: 1.2em; }
-    #km-header h2 span {
-      color: #7f2a28; }
+  @media screen and (min-width: 320px) and (max-width: 1024px) {
+    #km-header img {
+      width: 70%; } }
 
 #km-content {
   border-radius: 20px;
@@ -568,8 +615,6 @@ blockquote em {
         display: inline-block; }
     #km-content article.km-block .km-block-desc {
       padding: 15px; }
-      #km-content article.km-block .km-block-desc h4 {
-        font-family: monospace; }
       #km-content article.km-block .km-block-desc p {
         text-align: left;
         line-height: 20px; }
@@ -599,6 +644,47 @@ blockquote em {
           #km-content article.km-block .km-block-desc form#km-contact-form input[type="submit"]:hover {
             background: #e9e8e9;
             color: #373c3f; }
+  @media screen and (min-width: 320px) and (max-width: 1024px) {
+    #km-content article.km-block {
+      width: 100%;
+      float: none;
+      clear: both;
+      border-radius: 20px; }
+      #km-content article.km-block:last-child {
+        width: 100%; }
+      #km-content article.km-block .km-block-icon h3 {
+        font-size: 3.1em;
+        display: block;
+        margin: 0 auto; }
+      #km-content article.km-block .km-block-icon .fa-stack {
+        margin-bottom: 0.6em;
+        font-size: 5em; }
+      #km-content article.km-block .km-block-icon .sword-icon {
+        font-size: 2.3em;
+        font-weight: 400;
+        text-align: center;
+        line-height: 0.73em; }
+      #km-content article.km-block .km-block-desc p {
+        font-size: 2.7em;
+        line-height: 1.5em;
+        font-weight: 700;
+        text-align: center; }
+      #km-content article.km-block .km-block-desc span {
+        display: inline-table; }
+        #km-content article.km-block .km-block-desc span img {
+          width: 130px; }
+      #km-content article.km-block .km-block-desc form#km-contact-form {
+        width: 95%;
+        margin: 0 auto;
+        display: block; }
+        #km-content article.km-block .km-block-desc form#km-contact-form input, #km-content article.km-block .km-block-desc form#km-contact-form textarea {
+          border-radius: 10px;
+          padding: 20px 15px;
+          font-size: 2.7em; }
+        #km-content article.km-block .km-block-desc form#km-contact-form textarea {
+          font-size: 3em; }
+        #km-content article.km-block .km-block-desc form#km-contact-form input[type="submit"] {
+          width: 130px; } }
 
 #km-footer {
   width: 1000px;
@@ -607,6 +693,9 @@ blockquote em {
   #km-footer .km-social-icons a {
     font-family: none;
     text-decoration: none; }
+  @media screen and (min-width: 320px) and (max-width: 1024px) {
+    #km-footer .fa-lg {
+      font-size: 2.2em; } }
 
 .blinking-cursor {
   -webkit-animation: 1s blink step-end infinite;
