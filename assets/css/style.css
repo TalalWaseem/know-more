@@ -455,9 +455,10 @@ ul li {
   position: relative; }
 
 ul li::before {
-  content: "\1F786";
+  content: "\1F787";
   font-size: 12px;
   top: 1px;
+  color: #a51919;
   left: -20px;
   position: absolute; }
 
@@ -519,7 +520,14 @@ blockquote em {
 
   ul a {
     font-size: 2.7em;
-    line-height: 1.5em; } }
+    line-height: 1.5em; }
+
+  ul li::before {
+    content: "\1F787";
+    font-size: 2em;
+    top: 16px;
+    left: -36px;
+    position: absolute; } }
 #km-wrapper {
   width: 1000px;
   margin: 0 auto;
@@ -660,7 +668,7 @@ blockquote em {
         margin-bottom: 0.6em;
         font-size: 5em; }
       #km-content article.km-block .km-block-icon .sword-icon {
-        font-size: 2.3em;
+        font-size: 2.3em !important;
         font-weight: 400;
         text-align: center;
         line-height: 0.73em; }
